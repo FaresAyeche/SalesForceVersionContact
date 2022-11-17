@@ -1,0 +1,28 @@
+Web_Portal_Link=https://empathetic-koala-mavzxl-dev-ed.trailblaze.my.salesforce.com/
+TestDriverPath=C:\\selenium\\chromedriver.exe
+user_name=fares.ayeche@empathetic-koala-mavzxl.com
+user_pass=AzertyUI#2024!
+
+
+
+contact Identification
+    contact1
+first_name=Fares
+last_name=Ayeche
+Accoun_name=ACME
+   contact 2
+first_name2=Haroun
+last_name2=Ayeche
+
+     Contact
+first_name3=Fares
+last_name3=Ayeche
+
+expectedResult=success 
+Contact "Mr. Fares Ayeche" créé(e) 
+Fermer
+
+
+
+
+

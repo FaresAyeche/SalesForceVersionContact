@@ -15,7 +15,7 @@ import Pages.CreatioContactPage;
 public class stepCreationContact {
 	
 	CreatioContactPage CreatioContactPage;
-	///////////////////////////////////////////SC1//////////////////////////////////////////////////////
+	///////////////////////////////////////////SC1:Create new contact //////////////////////////////////////////////////////
 	@Given("User conected")
 	public void user_conected() throws Throwable {
 		CreatioContactPage= new CreatioContactPage(Browserhelper.driver);
@@ -52,7 +52,7 @@ public class stepCreationContact {
 							Thread.sleep(2000);
 									Browserhelper.driver.quit();
 								}
-	///////////////////////////////////////////SC2//////////////////////////////////////////////////////
+	///////////////////////////////////////////SC2:Remove Contact//////////////////////////////////////////////////////
 								
 								
 	@When("I click on contact")
@@ -73,10 +73,11 @@ public class stepCreationContact {
 			CreatioContactPage.verifyRemovedContact (Browserhelper.driver);
 				Browserhelper.driver.quit();
 }
-	///////////////////////////////////////////SC3//////////////////////////////////////////////////////
+	///////////////////////////////////////////SC3:Modification Contact //////////////////////////////////////////////////////
 
 	@When("I click on edit")
 		public void i_click_on_edit() throws Throwable {
+		
 				CreatioContactPage.clickOnEdit(Browserhelper.driver);
 }
 
@@ -84,8 +85,7 @@ public class stepCreationContact {
 		public void i_change_name_and_last_name()throws Throwable {
 			Thread.sleep(2000);
 				CreatioContactPage.editField(Browserhelper.driver); 
-					//CreatioContactPage.selectCv(Browserhelper.driver);
-						CreatioContactPage.clickOnSave(Browserhelper.driver);
+					CreatioContactPage.clickOnSave(Browserhelper.driver);
 													}
 
 	@Then("modification should be done")
@@ -93,7 +93,7 @@ public class stepCreationContact {
 			CreatioContactPage.verifyEdition(Browserhelper.driver);
 					Browserhelper.driver.quit();
 	}
-	///////////////////////////////////////////SC4//////////////////////////////////////////////////////
+	///////////////////////////////////////////SC4:Create two contact//////////////////////////////////////////////////////
 
 	@When("I click on save and new contact")
 		public void i_click_on_save_and_new_contact()throws Throwable {

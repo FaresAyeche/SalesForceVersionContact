@@ -43,15 +43,15 @@ public class CreatioContactPage {
 		
 			Thread.sleep(3000);
 				Browserhelper.driver.findElement(By.xpath("//div[contains(@class,'slds-icon-waffle')]")).click();
-					Thread.sleep(4000);
+					Thread.sleep(5000);
 						WebElement txt;
 							txt = Browserhelper.driver.findElement(By.xpath("//input[contains(@placeholder,'Recherchez des applications et des éléments...')]"));
-								Thread.sleep(2000);
+								//Thread.sleep(1000);
 									txt.click();
 										txt.sendKeys("Ventes");
-											Thread.sleep(2000);
+											//Thread.sleep(1000);
 												Browserhelper.driver.findElement(By.xpath("(//*[@class='slds-truncate']/b)[1]")).click();
-													Thread.sleep(1000);
+													//Thread.sleep(1000);
 		
 		
 		
@@ -87,9 +87,7 @@ public class CreatioContactPage {
 									System.out.println(a);
 									assertEquals(a,"Mr. "+Utils.getProperty("first_name")+" "+Utils.getProperty("last_name"));
 																		}
-										public void clickContactTarget(WebDriver driver)throws Throwable{
-											((JavascriptExecutor) driver).executeScript("arguments[0].click();",driver.findElement(By.xpath("//a[contains(text(),'fares ayeche')]")));
-										}
+									
 												public void clickOnrEMOVE(WebDriver driver)throws Throwable{
 													((JavascriptExecutor) driver).executeScript("arguments[0].click();",driver.findElement(By.xpath("//div[@id='brandBand_1']/div/div/div/div/div[2]/div/div/div[2]/div[2]/div/div/div/table/tbody/tr/td[8]/span/div/a/span/span")));
 													Thread.sleep(1000);
@@ -111,15 +109,16 @@ public void clickOnEdit(WebDriver driver)throws Throwable{
 	
 	((JavascriptExecutor) driver).executeScript("arguments[0].click();",driver.findElement(By.xpath("//span[@class='slds-truncate'][contains(text(),'Contacts')]")));
 	Thread.sleep(1000);
-	//Browserhelper.driver.findElement(By.xpath("//input[contains(@placeholder,'Recherchez dans cette liste...')]")).sendKeys("Aymen Aymen");
-	//Browserhelper.driver.findElement(By.xpath("//input[contains(@placeholder,'Recherchez dans cette liste...')]")).sendKeys(Keys.RETURN);
+	//recherche dans la liste de contact un contact a modifier 
+	Browserhelper.driver.findElement(By.xpath("//input[contains(@placeholder,'Recherchez dans cette liste...')]")).sendKeys("fares ayeche");
+	Browserhelper.driver.findElement(By.xpath("//input[contains(@placeholder,'Recherchez dans cette liste...')]")).sendKeys(Keys.RETURN);
+	Thread.sleep(4000);
 	((JavascriptExecutor) driver).executeScript("arguments[0].click();",driver.findElement(By.xpath("//div[@id='brandBand_1']/div/div/div/div/div[2]/div/div/div[2]/div[2]/div/div/div/table/tbody/tr/td[8]/span/div/a/span/span")));
 		Thread.sleep(1000);
 			((JavascriptExecutor) driver).executeScript("arguments[0].click();",driver.findElement(By.xpath("//a[contains(@data-target-selection-name,'sfdc:StandardButton.Contact.Edit')]")));
 	
 																}			
-public void searchOnContact(WebDriver driver)throws Throwable{
-	}
+
 
 public void editField(WebDriver driver)throws Throwable{
 	Thread.sleep(2000);
